@@ -4,9 +4,9 @@ class City:
         self.country = country
         self.name = name
         self.region = region
-        self.pop = pop
-        self.lat = lat
-        self.lng = lng
+        self.pop = int(pop)
+        self.lat = float(lat)
+        self.lng = float(lng)
 
     def __str__(self):
-        return self.name + "," + self.pop + "," + self.lat + "," + self.lng
+        return self.name + "," + str(self.pop) + "," + str(self.lat) + "," + str(self.lng)

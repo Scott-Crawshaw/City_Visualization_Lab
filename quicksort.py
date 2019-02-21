@@ -1,5 +1,5 @@
 def sort(the_list, compare_func):
-    quicksort(the_list, 0, len(list) - 1, compare_func)
+    quicksort(the_list, 0, len(the_list) - 1, compare_func)
 
 
 def partition(the_list, p, r, compare_func):
