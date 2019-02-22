@@ -3,15 +3,15 @@ from quicksort import sort
 
 
 def compare_names(a, b):
-    return a.name.lower() < b.name.lower()
+    return a.name.lower() <= b.name.lower()
 
 
 def compare_pop(a, b):
-    return a.pop > b.pop
+    return a.pop >= b.pop
 
 
 def compare_lat(a, b):
-    return a.lat < b.lat
+    return a.lat <= b.lat
 
 
 def write_file(file_name, objects):
