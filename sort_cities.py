@@ -1,3 +1,8 @@
+# Scott Crawshaw
+# 2/25/19
+# sort_cities.py
+# Submission for Lab 3
+
 from city import City
 from quicksort import sort
 

@@ -1,7 +1,8 @@
 # Scott Crawshaw
-# 2/21/19
-# checkpoint.py
-# Submission for lab 3 checkpoint
+# 2/25/19
+# city.py
+# Submission for lab 3
+
 
 class City:
 

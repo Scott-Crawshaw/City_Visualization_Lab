@@ -1,3 +1,9 @@
+# Scott Crawshaw
+# 2/25/19
+# quicksort.py
+# Submission for Lab 3
+
+
 def sort(the_list, compare_func):
     quicksort(the_list, 0, len(the_list) - 1, compare_func)
 
@@ -15,6 +21,7 @@ def quicksort(the_list, p, r, compare_func):
     if r - p < 1:
         return
 
+    # recursively partition smaller and smaller portions of the list
     pivot = partition(the_list, p, r, compare_func)
     quicksort(the_list, p, pivot-1, compare_func)
     quicksort(the_list, pivot+1, r, compare_func)
