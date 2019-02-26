@@ -16,7 +16,7 @@ LAT_TO_PIXELS = 18.345  # multiplier
 MARKER_RADIUS = 3
 
 MAX_DISPLAY_RANGE = 50  # number of cities to display
-PAUSE_SECONDS = 0.01  # number of seconds to pause between cities
+PAUSE_SECONDS = 0.5  # number of seconds to pause between cities
 
 
 def load_cities(cities_list):
