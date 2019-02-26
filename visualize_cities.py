@@ -13,8 +13,7 @@ WINDOW_HEIGHT = 360
 LNG_TO_PIXELS = 2  # multiplier
 LAT_TO_PIXELS = 2  # multiplier
 
-MARKER_WIDTH = 4
-MARKER_HEIGHT = 4
+MARKER_RADIUS = 3
 
 MAX_DISPLAY_RANGE = 50  # number of cities to display
 PAUSE_SECONDS = 1  # number of seconds to pause between cities
@@ -29,6 +28,7 @@ def load_cities(cities_list):
         values = line.split(",")
         city = City(None, values[0], None, values[1], values[2], values[3])
         cities_list.append(city)
+    file.close()
 
 
 def increase_display_range():
@@ -54,8 +54,8 @@ def draw_map():
         increase_display_range()
 
     for i in range(display_range):
-        draw_rectangle((WINDOW_WIDTH/2) + cities[i].lng * LNG_TO_PIXELS - MARKER_WIDTH/2,
-                       (WINDOW_HEIGHT/2) - cities[i].lat * LAT_TO_PIXELS - MARKER_HEIGHT/2, MARKER_WIDTH, MARKER_HEIGHT)
+        draw_circle((WINDOW_WIDTH/2) + cities[i].lng * LNG_TO_PIXELS,
+                       (WINDOW_HEIGHT/2) - cities[i].lat * LAT_TO_PIXELS, MARKER_RADIUS)
 
 
 cities = []
